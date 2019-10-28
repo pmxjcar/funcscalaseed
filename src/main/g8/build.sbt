@@ -123,19 +123,19 @@ enablePlugins(GitVersioning)
 
 /* The BaseVersion setting represents the in-development (upcoming) version,
  * as an alternative to SNAPSHOTS.
- */
-git.baseVersion := "3.0.0-RC3"
+//  */
+// git.baseVersion := "3.0.0-RC3"
 
-val ReleaseTag = """^v(\d+\.\d+(?:\.\d+(?:[-.]\w+)?)?)$""".r
-git.gitTagToVersionNumber := {
-  case ReleaseTag(v) => Some(v)
-  case _ => None
-}
+// val ReleaseTag = """^v(\d+\.\d+(?:\.\d+(?:[-.]\w+)?)?)$""".r
+// git.gitTagToVersionNumber := {
+//   case ReleaseTag(v) => Some(v)
+//   case _ => None
+// }
 
-git.formattedShaVersion := {
-  val suffix = git.makeUncommittedSignifierSuffix(git.gitUncommittedChanges.value, git.uncommittedSignifier.value)
+// git.formattedShaVersion := {
+//   val suffix = git.makeUncommittedSignifierSuffix(git.gitUncommittedChanges.value, git.uncommittedSignifier.value)
 
-  git.gitHeadCommit.value map { _.substring(0, 7) } map { sha =>
-    git.baseVersion.value + "-" + sha + suffix
-  }
-}
+//   git.gitHeadCommit.value map { _.substring(0, 7) } map { sha =>
+//     git.baseVersion.value + "-" + sha + suffix
+//   }
+// }
