@@ -1,0 +1,125 @@
+{
+    "version" : "1.1.2",
+    "project" : {
+        "name" : "root-test",
+        "directory" : "/home/jason/Dropbox/DEV/REP/P/funcscalaseed",
+        "sources" : [
+            "/home/jason/Dropbox/DEV/REP/P/funcscalaseed/src/test/scala-2.12",
+            "/home/jason/Dropbox/DEV/REP/P/funcscalaseed/src/test/scala",
+            "/home/jason/Dropbox/DEV/REP/P/funcscalaseed/src/test/java",
+            "/home/jason/Dropbox/DEV/REP/P/funcscalaseed/target/scala-2.12/src_managed/test"
+        ],
+        "dependencies" : [
+            "root"
+        ],
+        "classpath" : [
+            "/home/jason/Dropbox/DEV/REP/P/funcscalaseed/.bloop/root/scala-2.12/classes",
+            "/home/jason/.sbt/boot/scala-2.12.7/lib/scala-library.jar"
+        ],
+        "out" : "/home/jason/Dropbox/DEV/REP/P/funcscalaseed/.bloop/root",
+        "classesDir" : "/home/jason/Dropbox/DEV/REP/P/funcscalaseed/.bloop/root/scala-2.12/test-classes",
+        "resources" : [
+            "/home/jason/Dropbox/DEV/REP/P/funcscalaseed/src/test/resources",
+            "/home/jason/Dropbox/DEV/REP/P/funcscalaseed/target/scala-2.12/resource_managed/test"
+        ],
+        "scala" : {
+            "organization" : "org.scala-lang",
+            "name" : "scala-compiler",
+            "version" : "2.12.7",
+            "options" : [
+                "-P:semanticdb:synthetics:on",
+                "-P:semanticdb:failures:warning",
+                "-P:semanticdb:sourceroot:/home/jason/Dropbox/DEV/REP/P/funcscalaseed",
+                "-Yrangepos",
+                "-Xplugin-require:semanticdb",
+                "-Xplugin:/home/jason/.ivy2/cache/org.scalameta/semanticdb-scalac_2.12.7/jars/semanticdb-scalac_2.12.7-4.2.3.jar"
+            ],
+            "jars" : [
+                "/home/jason/.sbt/boot/scala-2.12.7/lib/scala-reflect.jar",
+                "/home/jason/.sbt/boot/scala-2.12.7/lib/scala-library.jar",
+                "/home/jason/.sbt/boot/scala-2.12.7/lib/scala-compiler.jar",
+                "/home/jason/.sbt/boot/scala-2.12.7/lib/jline.jar",
+                "/home/jason/.sbt/boot/scala-2.12.7/lib/scala-xml_2.12.jar"
+            ],
+            "setup" : {
+                "order" : "mixed",
+                "addLibraryToBootClasspath" : true,
+                "addCompilerToClasspath" : false,
+                "addExtraJarsToClasspath" : false,
+                "manageBootClasspath" : true,
+                "filterLibraryFromClasspath" : true
+            }
+        },
+        "java" : {
+            "options" : [
+            ]
+        },
+        "test" : {
+            "frameworks" : [
+                {
+                    "names" : [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "org.specs.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                }
+            ],
+            "options" : {
+                "excludes" : [
+                ],
+                "arguments" : [
+                ]
+            }
+        },
+        "platform" : {
+            "name" : "jvm",
+            "config" : {
+                "home" : "/usr/lib/jvm/java-8-openjdk-amd64/jre",
+                "options" : [
+                ]
+            },
+            "mainClass" : [
+            ]
+        },
+        "resolution" : {
+            "modules" : [
+                {
+                    "organization" : "org.scala-lang",
+                    "name" : "scala-library",
+                    "version" : "2.12.7",
+                    "artifacts" : [
+                        {
+                            "name" : "scala-library",
+                            "path" : "/home/jason/.sbt/boot/scala-2.12.7/lib/scala-library.jar"
+                        },
+                        {
+                            "name" : "scala-library",
+                            "classifier" : "sources",
+                            "path" : "/home/jason/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.7-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
