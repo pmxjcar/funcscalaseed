@@ -10,6 +10,7 @@ import sbt.Keys._
 
 //Command alias and plugins
 addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.6")
+enablePlugins(GitVersioning)
 addCommandAlias("fmt", "all scalafmtSbt scalafmt test:scalafmt")
 addCommandAlias("check", "all scalafmtSbtCheck scalafmtCheck test:scalafmtCheck")
 addCommandAlias("release",     ";clean ;+update ;+compile ;+package ;+publish")
@@ -115,27 +116,3 @@ lazy val root = (project in file("."))
     )
   )  
   .settings(commonSettings: _*)
-
-
-//------------- For Release
-
-enablePlugins(GitVersioning)
-
-/* The BaseVersion setting represents the in-development (upcoming) version,
- * as an alternative to SNAPSHOTS.
-//  */
-// git.baseVersion := "3.0.0-RC3"
-
-// val ReleaseTag = """^v(\d+\.\d+(?:\.\d+(?:[-.]\w+)?)?)$""".r
-// git.gitTagToVersionNumber := {
-//   case ReleaseTag(v) => Some(v)
-//   case _ => None
-// }
-
-// git.formattedShaVersion := {
-//   val suffix = git.makeUncommittedSignifierSuffix(git.gitUncommittedChanges.value, git.uncommittedSignifier.value)
-
-//   git.gitHeadCommit.value map { _.substring(0, 7) } map { sha =>
-//     git.baseVersion.value + "-" + sha + suffix
-//   }
-// }
